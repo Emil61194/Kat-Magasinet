@@ -132,6 +132,10 @@ a {
     padding-bottom: 3%;
 }
 
+main {
+    padding-bottom: 5%;
+}
+
 .newscontent {
     padding-top: 5%;
     display: flex;
