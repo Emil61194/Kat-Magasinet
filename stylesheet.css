@@ -180,9 +180,20 @@ aside {
 }
 
 .article-body {
-    padding-left: 5% ;
+    padding-left: 5%;
     padding-right: 5%;
     width: 60%;
+    margin: 0 auto;
+
+    column-count: 1; 
+    column-gap: 2rem; 
+}
+
+@media screen and (min-width: 1024px) {
+    .article-body {
+        column-count: 3;
+        column-gap: 2rem;
+    }
 }
 
 .article-body p {
