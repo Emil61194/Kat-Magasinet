@@ -189,13 +189,13 @@ aside {
     column-gap: 2rem; 
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .article-body {
         column-count: 2;
     }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1400px) {
     .article-body {
         column-count: 3;
     }
@@ -209,10 +209,7 @@ aside {
 .newsbox {
     border-style: solid;
     border-radius: 3%;
-    /* padding-left: 5%;
-    padding-right: 5%; */
     margin-bottom: 5%;
-    /* padding-bottom: 2%; */
     padding: 2% 5%;
     text-align: left;
     width: 80%;
