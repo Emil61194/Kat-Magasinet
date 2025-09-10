@@ -11,15 +11,33 @@
 <body>
     <header>
     </header>
-    <nav>
-        <a href="index.html"> <img src="catlogo.png" alt="Cat Logo" width="68" height="68"></a>
-        <a href="index.html" style="margin-top: auto; margin-bottom: auto; margin-left: -4%;">
-            <h2 class="interactable">Kat Magasinet</h2>
-        </a>
-        <a href="index.html" class="interactable">Hjem</a>
-        <a href="nyheder.html" class="interactable">Seneste Nyheder</a>
-        <button id="theme-toggle">Light Mode</button>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo">
+                <img src="catlogo.png" alt="Cat Logo" width="68" height="68">
+            </a>
+            <h2 class="site-title">Kat Magasinet</h2>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <a href="index.html" class="interactable">Hjem</a>
+            <a href="nyheder.html" class="interactable">Seneste Nyheder</a>
+            <button id="theme-toggle">Light Mode</button>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            ☰
+        </button>
     </nav>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
 
     <main>
         <section class="content">

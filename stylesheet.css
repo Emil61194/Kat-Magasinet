@@ -7,7 +7,7 @@
     --footer-color: rgb(145, 145, 145);
     --background-color: rgb(228, 228, 228);
     --aside-color: rgb(211, 211, 211);
-    --nav-color: linear-gradient(rgb(0, 255, 200),rgb(149, 209, 196));
+    --nav-color: linear-gradient(rgb(0, 255, 200), rgb(149, 209, 196));
     --text-color: #000;
     --button-rotation: -1;
     --news-color: rgb(209, 228, 224);
@@ -20,31 +20,31 @@
     --footer-color: rgb(31, 31, 31);
     --background-color: rgb(77, 77, 77);
     --aside-color: rgb(58, 58, 58);
-    --nav-color: linear-gradient(rgb(151, 199, 189),rgb(63, 117, 105));
+    --nav-color: linear-gradient(rgb(151, 199, 189), rgb(63, 117, 105));
     --text-color: #fff;
     --button-rotation: 1;
     --news-color: rgb(111, 126, 123);
     --background-gradient: linear-gradient(rgb(85, 85, 85), rgb(97, 91, 91));
     --border-color: rgb(115, 194, 168);
     --input-color: rgb(192, 231, 218);
-} 
+}
 
 input {
     font-family: cursive;
-    font-size: 1rem; 
+    font-size: 1rem;
 
     margin: 4% 0%;
     border-radius: 5%;
     border-style: solid;
     background-color: var(--input-color);
-    
-    width: 100%; 
+
+    width: 100%;
     box-sizing: border-box;
 
-    min-height: 3em; 
+    min-height: 3em;
 }
 
-body{
+body {
     height: 100%;
     color: var(--text-color);
     background-image: var(--background-gradient);
@@ -53,25 +53,66 @@ body{
 
 header {
     gap: 5%;
-    padding-left: 5% ;
-    padding-right: 5% ;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-nav {
+.navbar {
     display: flex;
-    flex-direction: row;
-    /* background-color: var(--nav-color); */
+    align-items: center;
+    justify-content: space-between;
     background-image: var(--nav-color);
-    padding-left: 5% ;
-    padding-right: 5% ;
-    gap: 5%;
+    padding: 0.5rem 1rem;
 }
 
-@media only screen and (max-width: 650px) {
-    nav{
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.site-title {
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+@media (max-width: 650px) {
+    .nav-links {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        padding-bottom: 5%;
+        background: var(--news-color);
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .site-title {
+        font-size: 1.2rem;
     }
 }
 
@@ -82,35 +123,35 @@ nav button {
 }
 
 nav button:active {
-  text-shadow: none;
-  color: var(--c);
-  box-shadow: inset 0 0 9e9q #0005;
-  transition: 0s;
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
 }
 
 nav button {
-  --c: #fff;
-  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
-    #004dff;
-  color: #0000;
-  border: none;
-  transform: perspective(500px) rotateY(calc(20deg * var(--button-rotation)));
-  text-shadow: calc(var(--button-rotation) * 0.08em) -.01em 0 var(--c),
-    calc(var(--button-rotation) * -0.08em) .01em 2px #0004;
-  outline-offset: .1em;
-  transition: 0.3s;
+    --c: #fff;
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,
+        #004dff;
+    color: #0000;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg * var(--button-rotation)));
+    text-shadow: calc(var(--button-rotation) * 0.08em) -.01em 0 var(--c),
+        calc(var(--button-rotation) * -0.08em) .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
 }
 
 nav button:hover,
 nav button:focus-visible {
-  --_p: 0%;
+    --_p: 0%;
 }
 
 nav h2 {
     text-decoration: underline;
 }
 
-.interactable:hover{
+.interactable:hover {
     color: red;
     transition: color 200ms;
 }
@@ -147,7 +188,7 @@ main {
     padding-bottom: 3%;
 }
 
-.flashnews{
+.flashnews {
     margin-bottom: 2%;
     text-align: left;
 
@@ -165,10 +206,10 @@ main {
 }
 
 .flashnews img {
-   float: right;
-   margin-bottom: 2%;
-   margin-left: 2%;
-   width: 4rem;
+    float: right;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    width: 4rem;
 }
 
 .body-title {
@@ -176,7 +217,7 @@ main {
     text-align: center;
     margin-top: 3%;
     font-family: cursive;
-    font-size: 3rem;   
+    font-size: 3rem;
 }
 
 @media (min-width: 700px) {
@@ -190,7 +231,8 @@ main {
     }
 
     .body-title {
-        font-size: 5rem;;
+        font-size: 5rem;
+        ;
     }
 }
 
@@ -212,8 +254,8 @@ aside {
     width: 60%;
     margin: 0 auto;
 
-    column-count: 1; 
-    column-gap: 2rem; 
+    column-count: 1;
+    column-gap: 2rem;
 }
 
 @media (min-width: 800px) {
@@ -245,16 +287,16 @@ aside {
     background-color: var(--news-color);
 }
 
-ul{
+ul {
     list-style-position: inside;
     padding-left: 0;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem;
-  background: var(--footer-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    background: var(--footer-color);
 }
