@@ -159,22 +159,16 @@ main {
     margin-right: 5%;
     padding: 1% 2% 1%;
 
-    font-size: 1rem;
+    font-size: 0.5rem;
 
     width: 80vw;
-}
-
-@media (min-width: 1024px) {
-    .flashnews {
-        width: 50vw;
-    }
 }
 
 .flashnews img {
    float: right;
    margin-bottom: 2%;
    margin-left: 2%;
-   width: 10rem;
+   width: 4rem;
 }
 
 .body-title {
@@ -182,7 +176,22 @@ main {
     text-align: center;
     margin-top: 3%;
     font-family: cursive;
-    font-size: 5rem;   
+    font-size: 3rem;   
+}
+
+@media (min-width: 700px) {
+    .flashnews {
+        width: 60vw;
+        font-size: 1rem;
+    }
+
+    .flashnews img {
+        width: 10rem;
+    }
+
+    .body-title {
+        font-size: 5rem;;
+    }
 }
 
 aside {
