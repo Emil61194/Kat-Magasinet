@@ -189,10 +189,15 @@ aside {
     column-gap: 2rem; 
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 600px) {
+    .article-body {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1150px) {
     .article-body {
         column-count: 3;
-        column-gap: 2rem;
     }
 }
 
