@@ -51,12 +51,6 @@ body {
     background-color: var(--background-color);
 }
 
-header {
-    gap: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 .navbar {
     user-select: none;
     display: flex;

@@ -10,28 +10,28 @@
 
 <body>
     <header>
+
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html" class="logo">
+                    <img src="catlogo.png" alt="Cat Logo" width="68" height="68">
+                </a>
+                <a href="index.html" class="interactable">
+                    <h2 class="site-title">Kat Magasinet</h2>
+                </a>
+            </div>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="interactable">Hjem</a>
+                <a href="nyheder.html" class="interactable">Seneste Nyheder</a>
+                <button id="theme-toggle">Light Mode</button>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                ☰
+            </button>
+        </nav>
     </header>
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="index.html" class="logo">
-                <img src="catlogo.png" alt="Cat Logo" width="68" height="68">
-            </a>
-            <a href="index.html" class="interactable">
-                <h2 class="site-title">Kat Magasinet</h2>
-            </a>
-        </div>
-
-        <div class="nav-links" id="nav-links">
-            <a href="index.html" class="interactable">Hjem</a>
-            <a href="nyheder.html" class="interactable">Seneste Nyheder</a>
-            <button id="theme-toggle">Light Mode</button>
-        </div>
-
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-            ☰
-        </button>
-    </nav>
-
     <script>
         const hamburger = document.getElementById("hamburger");
         const navLinks = document.getElementById("nav-links");
