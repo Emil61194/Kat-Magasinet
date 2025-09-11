@@ -308,3 +308,7 @@ footer a::before {
     width: 100%;
     height: 100%;
 }
+
+.gridview img:last-child {
+    grid-column-end: span 2;
+}
