@@ -296,3 +296,7 @@ footer {
     padding: 0.5rem;
     background: var(--footer-color);
 }
+
+footer a::before {
+  content: "© ";
+}
