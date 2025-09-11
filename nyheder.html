@@ -10,35 +10,25 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="logo">
-                    <img src="catlogo.png" alt="Cat Logo" width="68" height="68">
-                </a>
-                <a href="index.html" class="interactable">
-                    <h2 class="site-title">Kat Magasinet</h2>
-                </a>
-            </div>
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('PartialViews/_navView.html')
+                .then(res => res.text())
+                .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+        </script>
 
-            <div class="nav-links" id="nav-links">
-                <a href="index.html" class="interactable">Hjem</a>
-                <a href="nyheder.html" class="interactable">Seneste Nyheder</a>
-                <button id="theme-toggle">Light Mode</button>
-            </div>
 
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                ☰
-            </button>
-        </nav>
+        <div id="js-placeholder"></div>
+        <script>
+            fetch('PartialViews/_navScripts.js')
+                .then(res => res.text())
+                .then(js => {
+                    const scriptEl = document.createElement('script');
+                    scriptEl.textContent = js;
+                    document.body.appendChild(scriptEl);
+                });
+        </script>
     </header>
-    <script>
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("nav-links");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-        });
-    </script>
 
     <main>
         <h1 class="body-title">Seneste Nyt</h1>
@@ -92,21 +82,6 @@
     <footer>
         <a href="index.html">Katte Foreningen</a>
     </footer>
-
-    <script>
-        const toggle = document.getElementById("theme-toggle");
-        toggle.addEventListener("click", () => {
-            const root = document.documentElement;
-
-            if (root.dataset.theme === "dark") {
-                root.dataset.theme = "light";
-                toggle.innerText = "Light Mode";
-            } else {
-                root.dataset.theme = "dark";
-                toggle.innerText = "Dark Mode";
-            }
-        });
-    </script>
 </body>
 
 </html>
