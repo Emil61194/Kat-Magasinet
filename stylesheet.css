@@ -312,6 +312,10 @@ footer a::before {
     border-radius: 5%;
 }
 
+.gridview img:hover{
+    filter: saturate(3);
+}
+
 .gridview img:last-child {
     grid-column-end: span 2;
 }
