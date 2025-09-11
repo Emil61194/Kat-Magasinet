@@ -302,11 +302,14 @@ footer a::before {
     grid-template-columns: auto auto auto;
     padding-bottom: 3%;
     margin: 5% 5% 5%;
+    gap: 1%;
 }
 
 .gridview img{
     width: 100%;
     height: 100%;
+    border: solid;
+    border-radius: 5%;
 }
 
 .gridview img:last-child {
